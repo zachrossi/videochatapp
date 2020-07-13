@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Zachary Rossi">
+    <meta name="description" content="Zachary Rossi's Chat Site">
+    <title>VShare</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="customV3.css">
+    <link rel="stylesheet" href="customV4.css">
+</head>
+<body>
+    <ul class="pages">
+        <div class ="container">
+        <li class="video">
+            <video id="media-video" width="100%" height="100%">
+                <source src="test.mp4" type="video/mp4">
+            </video>
+        </li>
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="Type here..."/>
+        </li>
+        <li class="buttons">
+            <button class="play-btn" onclick="playPause()">Play</button>
+            <button class="pause-btn" onclick="playPause()" hidden>Pause</button>
+            <button class="plus15-btn" onclick="plus15()" >+15</button>
+            <button class="minus15-btn" onclick="minus15()" >-15</button>
+            <input type="range" class="slider-btn" id="slider-btn"><p class="toggle_fullscreen" id="slider-data"></p>
+            <!-- <div class="time-slider"></div> -->
+        </li>
+        </div>
+        <li class="login page">
+            <div class="form">
+                <h3 class="title">What's your nickname?</h3>
+                <input class="usernameInput" type="text" maxlength="14" />
+            </div>
+        </li>
+    </ul>
+  <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>
